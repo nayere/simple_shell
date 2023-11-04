@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Change directory to the root of the Git repository
+cd nayere/simple_shell
+
+# Use git log to generate the author list with names and email addresses
+author_list=$(git log --format='%an <%ae>' | sort -u)
+
+# Create or overwrite the AUTHORS file with the author list
+echo "$author_list" > AUTHORS
+
+# Display a message indicating the AUTHORS file has been generated
+echo "AUTHORS file has been generated."
