@@ -1,8 +1,6 @@
 #ifndef _SHELL_H_
 #define _SHELL_H_
 
-/** Authors Mwangii & Nayere */
-
 /** environ var */
 
 extern char **environ;
@@ -34,12 +32,12 @@ int _strncmp(const char *str1, const char *str2, size_t n);
 unsigned int check_delim(char c, const char *str);
 char *_strncpy(char *dest, char *src, int n);
 char *_strtok(char *str, const char *tok);
-int set_env(char *var, char *val);
-int unset_env(char *var);
 char *_strcat(char *dest, char *src);
 char *_strcpy(char *dest, char *src);
-void array_rev(char *arr, int len);
 int _strcmp(char *str1, char *str2);
+void array_rev(char *arr, int len);
+int set_env(char *var, char *val);
+int unset_env(char *var);
 int _strlen(char *s);
 int _putchar(char c);
 int _atoi(char *s);
@@ -53,17 +51,18 @@ char *_strchr(char *s, char c);
 /** Memory  Managment */
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
-void free_all(char **input, char *line);
-void free_env(char **env);
 void *fill_an_array(void *a, int n, unsigned int len);
 char *_memcpy(char *dest, char *src, unsigned int n);
+void free_all(char **input, char *line);
 void *_calloc(unsigned int size);
+void free_env(char **env);
 
 /** error handle and Printer */
-void print_number(unsigned int n);
+
 void print_number_in(int n);
-void print_error(char *input, int count, char **argv);
+void print_number(unsigned int n);
 void _prerror(char **argv, int c, char **input);
+void print_error(char *input, int count, char **argv);
 
 /** Command parser and extractor */
 
@@ -87,15 +86,16 @@ void signal_to_handel(int sig);
 
 /** ####BUL FUNC #####*/
 
-void hashtag_handle(char *buff);
+
 int history(char *input);
-int history_dis(char **cmd, int er);
-int dis_env(char **cmd, int er);
-int change_dir(char **cmd, int er);
-int display_help(char **cmd, int er);
-int echo_bul(char **cmd, int er);
-void  exit_bul(char **cmd, char *input, char **argv, int c);
 int print_echo(char **input);
+void hashtag_handle(char *buff);
+int dis_env(char **cmd, int er);
+int echo_bul(char **cmd, int er);
+int change_dir(char **cmd, int er);
+int history_dis(char **cmd, int er);
+int display_help(char **cmd, int er);
+void  exit_bul(char **cmd, char *input, char **argv, int c);
 
 /**
  * struct bulltin - contain bultin to handle and function to excute
