@@ -1,7 +1,5 @@
 #include "shell.h"
 
-/** Authors Mwangii & Nayere */
-
 /**
 * _putchar - writes the character c to stdout
 * @c: The character to print
@@ -99,4 +97,4 @@ _putchar('\n');
 return;
 }
 
-/** Authors are Mwangii & Nayere */
+/** Authors Job Nayere */
