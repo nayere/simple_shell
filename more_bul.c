@@ -1,5 +1,7 @@
 #include "shell.h"
 
+/** Authored By Job Nayere */
+
 /**
  * history_dis - Display History Of User Input Simple Shell
  * @c:Parsed Command
