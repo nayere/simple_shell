@@ -44,6 +44,3 @@ A star (*) next to a name means that the command is disabled.
  getopts optstring name [arg]                                    wait [-fn] [id ...]
  hash [-lr] [-p pathname] [-dt] [name ...]                       while COMMANDS; do COMMANDS; done
  help [-dms] [pattern ...]                                       { COMMANDS ; }
-
-
-/** Generated Authors Mwangii & Nayere */
