@@ -53,7 +53,7 @@ else if (_strcmp(cmd[0], "unsetenv") == 0)
 if (cmd[1] != NULL)
 {
 res = unset_env(cmd[1]);
-					
+
 if (res != 0)
 fprintf(stderr, "failed to unset_env\n");
 else
