@@ -31,4 +31,4 @@ echo: echo [-neE] [arg ...]
                 HHHHHHHH. HHHHHHHH can be one to eight hex digits.
 
     Exit Status:
-    Returns success unless a write error occurs. 
+    Returns success unless a write error occurs.
