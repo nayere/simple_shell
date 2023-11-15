@@ -1,6 +1,6 @@
 #include "shell.h"
 
-/** Authors Mwangii & Nayere */
+/** Author - Nayere */
 
 /**
  * path_cmd -  Search In $PATH For Excutable Command
