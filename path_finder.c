@@ -98,5 +98,3 @@ char *_getenv(char *name)
 	return (NULL);
 }
 
-/** Authored by Job nayere/
-
