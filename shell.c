@@ -10,18 +10,18 @@
  */
 int main(__attribute__((unused)) int argc, char **argv)
 {
-    int counter = 0, statue = 1, st = 0, res;
-    char *input, **cmd;
+int counter = 0, statue = 1, st = 0, res;
+char *input, **cmd;
 
-    setup_initial(argc, argv);
+setup_initial(argc, argv);
 
-    while (statue)
-    {
-        counter++;
-        input = get_input();
+while (statue)
+{
+    counter++;
+    input = get_input();
 
-        if (input[0] == '\0')
-            continue;
+    if (input[0] == '\0')
+        continue;
 
         handle_input(input, &cmd, &counter, argv, &st, &res);
         free_input_and_cmd(&cmd, input);
