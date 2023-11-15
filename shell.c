@@ -106,4 +106,18 @@ i++;
 return (-1);
 }
 
+/**
+* creat_envi - Creat Array of Enviroment Variable
+* @envi: Array of Enviroment Variable
+* Return: Void
+*/
+void creat_envi(char **envi)
+{
+int i;
+
+for (i = 0; environ[i]; i++)
+envi[i] = _strdup(environ[i]);
+envi[i] = NULL;
+}
+
 /** Authors Mwangii & Nayere */
