@@ -109,5 +109,5 @@ typedef struct  bulltin
 	int (*fun)(char **line, int er);
 } bul_t;
 
-#endif /**Author Job Nayere */
+#endif /** Author Job Nayere */
 
