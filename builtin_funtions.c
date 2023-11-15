@@ -1,13 +1,15 @@
 #include "shell.h"
 
+/** Author - Nayere */
+
 /**
-* exit_bul - Exit Statue Shell
-* @cmd: Parsed Command
-* @input: User Input
-* @argv:Program Name
-* @c:Excute Count
-* Return: Void (Exit Statue)
-*/
+ * exit_bul - Exit Statue Shell
+ * @cmd: Parsed Command
+ * @input: User Input
+ * @argv:Program Name
+ * @c:Excute Count
+ * Return: Void (Exit Statue)
+ */
 void  exit_bul(char **cmd, char *input, char **argv, int c)
 {
 int statue, i = 0;
@@ -130,7 +132,8 @@ int echo_bul(char **cmd, int st)
 unsigned int  pid = getppid();
 char *path;
 
-if (_strncmp(cmd[1], "$?", 2) == 0{
+if (_strncmp(cmd[1], "$?", 2) == 0)
+{
 print_number_in(st);
 PRINTER("\n");
 }
@@ -154,4 +157,4 @@ return (print_echo(cmd));
 return (1);
 }
 
-/** Authored by Job Nayere */
+/** Author - Nayere */
