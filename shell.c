@@ -48,30 +48,29 @@ char *input, **cmd;
 						fprintf(stderr, "incorrect set_env usage\n");
 				}
 			}
-			else if (_strcmp(cmd[0], "unsetenv") == 0)
-			{
-				if (cmd[1] != NULL)
-				{
-					res = unset_env(cmd[1]);
-					if (res != 0)
-						fprintf(stderr, "failed to unset_env\n");
-					else
-						fprintf(stderr, "incorrect unset_env usage");
-				}
-			}
-			else if (check_builtin(cmd) == 0)
-			{
-				st = handle_builtin(cmd, st);
-				free_all(cmd, input);
-				continue;
-			}
+else if (_strcmp(cmd[0], "unsetenv") == 0)
+{
+	if (cmd[1] != NULL)
+		{
+			res = unset_env(cmd[1]);
+			if (res != 0)
+				fprintf(stderr, "failed to unset_env\n");
 			else
-			{
-				st = check_cmd(cmd, input, counter, argv);
-
-			}
-			free_all(cmd, input);
+				fprintf(stderr, "incorrect unset_env usage");
 		}
+}
+else if (check_builtin(cmd) == 0)
+{
+	st = handle_builtin(cmd, st);
+	free_all(cmd, input);
+	continue;
+}
+else
+{
+	st = check_cmd(cmd, input, counter, argv);
+}
+		free_all(cmd, input);
+	}
 	return (statue);
 }
 
