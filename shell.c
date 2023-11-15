@@ -1,5 +1,7 @@
 #include "shell.h"
 
+/** Authors Mwangii & Nayere */
+
 /**
  * main - Simple Shell (Hsh)
  * @argc: Argument Count
@@ -11,7 +13,7 @@ int main(__attribute__((unused)) int argc, char **argv)
     int counter = 0, statue = 1, st = 0, res;
     char *input, **cmd;
 
-    setup_initial(argv);
+    setup_initial(argc, argv);
 
     while (statue)
     {
@@ -30,22 +32,15 @@ int main(__attribute__((unused)) int argc, char **argv)
 
 /**
  * setup_initial - Perform initial setup
- * @argv: Argument value
+ * @argc: Argument Count
+ * @argv: Argument Value
  */
-void setup_initial(char **argv)
+void setup_initial(int argc, char **argv)
 {
     if (argv[1] != NULL)
         read_file(argv[1], argv);
     signal(SIGINT, signal_to_handel);
-}
-
-/**
- * evaluate_statue - Evaluate the statue condition
- * Return: Statue value
- */
-int evaluate_statue()
-{
-    return statue;
+    (void)argc;
 }
 
 /**
@@ -80,9 +75,9 @@ void handle_input(char *input, char ***cmd, int *counter, char **argv, int *st, 
     else if (_strcmp((*cmd)[0], "setenv") == 0)
     {
         handle_setenv(*cmd, res);
-    }
+    } 
     else if (_strcmp((*cmd)[0], "unsetenv") == 0)
-    {
+    
         handle_unsetenv(*cmd, res);
     }
     else if (check_builtin(*cmd) == 0)
