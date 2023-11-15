@@ -15,11 +15,10 @@ int main(__attribute__((unused)) int argc, char **argv)
 int counter = 0, statue = 1, st = 0, res;
 char *input, **cmd;
 
-
-	if (argv[1] != NULL)
-		read_file(argv[1], argv);
-	signal(SIGINT, signal_to_handel);
-	while (statue)
+if (argv[1] != NULL)
+read_file(argv[1], argv);
+signal(SIGINT, signal_to_handel);
+while (statue)
 	{
 		counter++;
 		if (isatty(STDIN_FILENO))
@@ -48,13 +47,13 @@ char *input, **cmd;
 						fprintf(stderr, "incorrect set_env usage\n");
 				}
 			}
-else if (_strcmp(cmd[0], "unsetenv") == 0)
-{
-	if (cmd[1] != NULL)
-		{
-			res = unset_env(cmd[1]);
-			if (res != 0)
-				fprintf(stderr, "failed to unset_env\n");
+			else if (_strcmp(cmd[0], "unsetenv") == 0)
+			{
+				if (cmd[1] != NULL)
+				{
+				res = unset_env(cmd[1]);
+					if (res != 0)
+						fprintf(stderr, "failed to unset_env\n");
 			else
 				fprintf(stderr, "incorrect unset_env usage");
 		}
